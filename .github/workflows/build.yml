@@ -1,0 +1,26 @@
+name: Build LaTeX
+
+on:
+  push:
+  pull_request:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build PDF file
+        uses: xu-cheng/texlive-action/full@v1
+        with:
+          run: |
+            apk add make
+            make
+      - name: Upload PDF file
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ github.event.repository.name }}.pdf
+          path: |
+            build/main.pdf

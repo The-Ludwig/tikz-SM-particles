@@ -1,5 +1,7 @@
-tikz diagram: SM particles
+tikz Diagram: Standard Model Particles
 ===
+[Latest PDF Version](https://github.com/The-Ludwig/tikz-SM-particles/releases/latest/download/sm-particles.pdf)
+[![Build LaTeX](https://github.com/The-Ludwig/tikz-SM-particles/actions/workflows/build.yml/badge.svg)](https://github.com/The-Ludwig/tikz-SM-particles/actions/workflows/build.yml)
 
 ![The diagram](particles.svg)
 
