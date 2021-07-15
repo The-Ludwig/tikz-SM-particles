@@ -23,4 +23,4 @@ jobs:
         with:
           name: ${{ github.event.repository.name }}.pdf
           path: |
-            build/main.pdf
+            build/particles.pdf

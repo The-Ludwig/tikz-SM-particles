@@ -22,12 +22,12 @@ jobs:
             apk add make
             make
       - name: Rename output
-        run: cp build/main.pdf ${{ github.event.repository.name }}.pdf
+        run: cp build/particles.pdf sm-particles.pdf
       - uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
           files: |
             LICENSE
-            ${{ github.event.repository.name }}.pdf
+            sm-particles.pdf
 
